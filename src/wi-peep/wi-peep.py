@@ -19,7 +19,7 @@ def handle_packet(pkt):
 
 beacon.add_payload(tim_bitmap)
 
-ssid = Dot11Elt(ID='SSID', info='CataConi')
+ssid = Dot11Elt(ID='SSID', info='Familia_Rubio_Villa')
 freq = Dot11Elt(ID='DSset', info='\x03')
 rates = Dot11Elt(ID='Rates', info='\x82\x84\x8b\x96\x0c\x12\x18\x24')
 
@@ -34,6 +34,6 @@ pkt = radiotap/beacon
 
 
 
-sendp(pkt, iface='en1', inter=0.1, loop=1)
+sendp(pkt, iface='en0', inter=0.1, loop=1)
 
-sniff(iface='en1', prn=handle_packet, timeout=10)
+sniff(iface='en0', prn=handle_packet, timeout=10)

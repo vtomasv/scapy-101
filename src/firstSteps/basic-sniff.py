@@ -6,7 +6,7 @@ interfaces = get_if_list()
 # Buscar la interfaz de red WiFi
 wifi_iface = None
 for iface in interfaces:
-    if "wlan" in iface or "wifi" in iface or "en1" == iface:
+    if "wlan" in iface or "wifi" in iface or "en0" == iface:
         wifi_iface = iface
         break
 

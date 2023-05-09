@@ -9,4 +9,4 @@ def packet_handler(packet):
         print("SSID: %s, BSSID: %s, Channel: %d" % (ssid, bssid, channel))
 
 # Captura los paquetes de beacon y extrae la información de la red WiFi
-sniff(iface="en1", prn=packet_handler)
+sniff(iface="en0", prn=packet_handler)
